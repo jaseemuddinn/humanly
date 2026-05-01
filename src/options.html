@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Humanly settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="card">
+      <header>
+        <h1>Humanly</h1>
+        <p class="tag">make your emails sound human</p>
+      </header>
+
+      <section>
+        <label for="provider">Provider</label>
+        <p class="help">
+          Pick which AI provider to use. Each provider keeps its own API key,
+          so switching back doesn't lose anything.
+        </p>
+        <select id="provider"></select>
+      </section>
+
+      <section>
+        <label for="apiKey">
+          API key <span id="providerLabel" class="muted-inline"></span>
+        </label>
+        <p class="help">
+          Stored only in this browser via <code>chrome.storage.local</code>.
+          Sent only to <code id="providerHost">api.anthropic.com</code> over
+          HTTPS.
+          <a id="keyHelpLink" href="#" target="_blank">Get a key →</a>
+        </p>
+        <div class="row">
+          <input
+            id="apiKey"
+            type="password"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="sk-ant-..."
+          />
+          <button id="toggleVis" type="button" title="Show / hide">show</button>
+        </div>
+      </section>
+
+      <section>
+        <label for="model">Model</label>
+        <p class="help">
+          Suggested models for this provider — or type any model ID the
+          provider supports.
+        </p>
+        <input
+          id="model"
+          type="text"
+          list="modelList"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="model id"
+        />
+        <datalist id="modelList"></datalist>
+      </section>
+
+      <section class="actions">
+        <button id="save" class="primary" type="button">Save</button>
+        <button id="test" type="button">Test key</button>
+        <span id="status" class="status" hidden></span>
+      </section>
+
+      <footer>
+        <p>
+          Open Gmail, start a draft, click <strong>✶ Humanize</strong> in the
+          compose window.
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

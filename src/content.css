@@ -1,0 +1,215 @@
+.humanly-trigger {
+  position: absolute;
+  top: 8px;
+  right: 56px;
+  z-index: 2147483646;
+  background: #faf6ee;
+  color: #8b2020;
+  border: 1px solid rgba(139, 32, 32, 0.35);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font: 600 12px/1.2 "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+.humanly-trigger:hover {
+  background: #fff;
+}
+.humanly-trigger:active {
+  transform: scale(0.97);
+}
+
+.humanly-panel {
+  position: absolute;
+  top: 40px;
+  right: 12px;
+  width: 320px;
+  z-index: 2147483647;
+  background: #faf6ee;
+  color: #1a1210;
+  border: 1px solid rgba(26, 18, 16, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  padding: 14px 14px 12px;
+  font: 14px/1.4 "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.humanly-panel .hp-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.humanly-panel .hp-brand {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 18px;
+  color: #8b2020;
+}
+.humanly-panel .hp-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: #1a1210;
+  opacity: 0.5;
+  padding: 0 4px;
+}
+.humanly-panel .hp-close:hover {
+  opacity: 1;
+}
+
+.humanly-panel .hp-slider-row {
+  margin: 8px 0 14px;
+}
+.humanly-panel .hp-slider {
+  position: relative;
+  height: 22px;
+  margin: 6px 6px 0;
+  cursor: pointer;
+}
+.humanly-panel .hp-track {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(26, 18, 16, 0.14);
+  border-radius: 2px;
+}
+.humanly-panel .hp-fill {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 50%;
+  height: 4px;
+  background: #8b2020;
+  border-radius: 2px;
+  transition: width 0.18s ease;
+}
+.humanly-panel .hp-thumb {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 22px;
+  background: #faf6ee;
+  border: 2px solid #8b2020;
+  border-radius: 50%;
+  cursor: grab;
+  transition: left 0.18s ease;
+}
+.humanly-panel .hp-thumb:active {
+  cursor: grabbing;
+}
+
+.humanly-panel .hp-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding: 0 4px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(26, 18, 16, 0.55);
+}
+.humanly-panel .hp-lbl {
+  cursor: pointer;
+  user-select: none;
+}
+.humanly-panel .hp-lbl.active {
+  color: #8b2020;
+  font-weight: 600;
+}
+
+.humanly-panel .hp-go {
+  width: 100%;
+  background: #8b2020;
+  color: #faf6ee;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: 600 14px/1 "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+.humanly-panel .hp-go:hover {
+  background: #6f1818;
+}
+.humanly-panel .hp-go:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.humanly-panel .hp-status {
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(26, 18, 16, 0.7);
+}
+.humanly-panel .hp-status[data-kind="err"] {
+  color: #8b2020;
+}
+
+.humanly-panel .hp-output {
+  margin-top: 12px;
+  border-top: 1px solid rgba(26, 18, 16, 0.1);
+  padding-top: 10px;
+}
+.humanly-panel .hp-output-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(26, 18, 16, 0.55);
+  margin-bottom: 6px;
+}
+.humanly-panel .hp-output-text {
+  max-height: 240px;
+  overflow-y: auto;
+  font-size: 13px;
+  white-space: pre-wrap;
+  background: #fff;
+  border: 1px solid rgba(26, 18, 16, 0.08);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.humanly-panel .hp-output-text mark.hl-changed {
+  background: #fff2a8;
+  color: inherit;
+  padding: 1px 2px;
+  border-radius: 2px;
+}
+
+.humanly-panel .hp-actions {
+  display: flex;
+  gap: 8px;
+}
+.humanly-panel .hp-cancel,
+.humanly-panel .hp-replace {
+  flex: 1;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: 600 13px/1 "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.humanly-panel .hp-cancel {
+  background: transparent;
+  color: #1a1210;
+  border: 1px solid rgba(26, 18, 16, 0.2);
+}
+.humanly-panel .hp-cancel:hover {
+  background: rgba(26, 18, 16, 0.05);
+}
+.humanly-panel .hp-replace {
+  background: #1a1210;
+  color: #faf6ee;
+  border: none;
+}
+.humanly-panel .hp-replace:hover {
+  background: #000;
+}
