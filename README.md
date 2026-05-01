@@ -1,6 +1,6 @@
 # Humanly
 
-A Chrome extension that rewrites your Gmail drafts to sound human, with three intensity levels (Subtle / Human / CEO). Functionally a Sinceerly clone, **BYOK only** — bring your own API key, no paid tier, no servers.
+A Chrome extension that rewrites your Gmail drafts to sound human, with three intensity levels (Subtle / Human / CEO). Functionally a Sinceerly clone, **BYOK only** - bring your own API key, no paid tier, no servers.
 
 ## What it does
 
@@ -12,25 +12,25 @@ A Chrome extension that rewrites your Gmail drafts to sound human, with three in
 
 ## Supported providers
 
-| Provider | Notes | Get a key |
-| -------- | ----- | --------- |
-| **Anthropic** (Claude) | claude-haiku-4-5 / sonnet-4-6 / opus-4-7 | https://console.anthropic.com/settings/keys |
-| **OpenAI** (GPT) | gpt-4o-mini / gpt-4o / gpt-4.1 / gpt-5 | https://platform.openai.com/api-keys |
-| **Google Gemini** | gemini-2.5-flash / gemini-2.5-pro / gemini-2.0-flash | https://aistudio.google.com/app/apikey |
-| **xAI** (Grok) | grok-4 / grok-3 / grok-3-mini | https://console.x.ai/ |
-| **Groq** | llama-3.3-70b-versatile / llama-3.1-8b-instant | https://console.groq.com/keys |
-| **DeepSeek** | deepseek-chat / deepseek-reasoner | https://platform.deepseek.com/api_keys |
-| **Mistral** | mistral-small-latest / mistral-large-latest | https://console.mistral.ai/api-keys/ |
-| **OpenRouter** | any model on OpenRouter (provider/model format) | https://openrouter.ai/keys |
+| Provider               | Notes                                                | Get a key                                   |
+| ---------------------- | ---------------------------------------------------- | ------------------------------------------- |
+| **Anthropic** (Claude) | claude-haiku-4-5 / sonnet-4-6 / opus-4-7             | https://console.anthropic.com/settings/keys |
+| **OpenAI** (GPT)       | gpt-4o-mini / gpt-4o / gpt-4.1 / gpt-5               | https://platform.openai.com/api-keys        |
+| **Google Gemini**      | gemini-2.5-flash / gemini-2.5-pro / gemini-2.0-flash | https://aistudio.google.com/app/apikey      |
+| **xAI** (Grok)         | grok-4 / grok-3 / grok-3-mini                        | https://console.x.ai/                       |
+| **Groq**               | llama-3.3-70b-versatile / llama-3.1-8b-instant       | https://console.groq.com/keys               |
+| **DeepSeek**           | deepseek-chat / deepseek-reasoner                    | https://platform.deepseek.com/api_keys      |
+| **Mistral**            | mistral-small-latest / mistral-large-latest          | https://console.mistral.ai/api-keys/        |
+| **OpenRouter**         | any model on OpenRouter (provider/model format)      | https://openrouter.ai/keys                  |
 
 Each provider keeps its own API key — switching back doesn't lose anything. The model field accepts any model ID the provider supports (the dropdown is suggestions, not a closed list).
 
 ## The three levels
 
-| Level  | Behavior |
-| ------ | -------- |
-| Subtle | Removes em-dashes and AI cliches, adds contractions, light edits. Stays professional. |
-| Human  | ~50% shorter. Casual. Drops formal openers/closers. One or two short paragraphs. |
+| Level  | Behavior                                                                                                      |
+| ------ | ------------------------------------------------------------------------------------------------------------- |
+| Subtle | Removes em-dashes and AI cliches, adds contractions, light edits. Stays professional.                         |
+| Human  | ~50% shorter. Casual. Drops formal openers/closers. One or two short paragraphs.                              |
 | CEO    | Aggressively short. Fragments. Lowercase starts. One small typo per ~50 words. Appends "Sent from my iPhone". |
 
 ## Install (load unpacked)
