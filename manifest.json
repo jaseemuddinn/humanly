@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Humanly — make your emails sound human",
+  "name": "Humanly - make your emails sound human",
   "version": "0.2.0",
   "description": "Rewrite Gmail drafts (Subtle / Human / CEO) using your own API key from Anthropic, OpenAI, Gemini, xAI Grok, Groq, DeepSeek, Mistral, or OpenRouter.",
   "permissions": ["storage"],
