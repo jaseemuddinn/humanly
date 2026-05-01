@@ -38,10 +38,20 @@ Each provider keeps its own API key — switching back doesn't lose anything. Th
 1. Open `chrome://extensions` in Chrome.
 2. Toggle **Developer mode** on (top right).
 3. Click **Load unpacked**.
-4. Select this folder (`chrome_Ext/`).
+4. Select the extension folder (the `humanly` folder in this repo).
 5. Click the Humanly toolbar icon to open settings.
 6. Pick a provider, paste your API key, pick a model, click **Test key**, then **Save**.
 7. Open Gmail, start a draft, click `✶ Humanize`.
+
+### Install from a release (zip)
+
+1. Download the latest release zip (for example `humanly-v1.0.0.zip`) from the project's Releases page.
+2. Unzip the archive to a folder (e.g. `humanly/`) somewhere on your machine.
+3. Open `chrome://extensions` in Chrome and enable **Developer mode**.
+4. Click **Load unpacked** and select the unzipped `humanly` folder.
+5. If you already have Humanly installed in Chrome, you can skip re-loading; otherwise the extension will appear in your list.
+
+Note: if the extension is already installed and working, you don't need to re-download or re-load it.
 
 ## Privacy
 
